@@ -2,6 +2,7 @@
 import { defineConfig } from 'file:///D:/E-commerse/e-commerse/node_modules/vite/dist/node/index.js';
 import react from 'file:///D:/E-commerse/e-commerse/node_modules/@vitejs/plugin-react/dist/index.mjs';
 var vite_config_default = defineConfig({
+  base:"/maher-repo"
   plugins: [svgr(), react()],
 });
 export { vite_config_default as default };
