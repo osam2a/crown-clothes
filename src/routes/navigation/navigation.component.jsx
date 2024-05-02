@@ -35,10 +35,6 @@ const navigation = () => {
           </div>
 
           <div>
-            <Link to='/about'>ABOUT</Link>
-          </div>
-
-          <div>
             {currentUser ? (
               <button
                 type='button'

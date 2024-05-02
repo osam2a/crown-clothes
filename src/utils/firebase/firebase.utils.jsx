@@ -22,6 +22,12 @@ import {
   onAuthStateChanged,
 } from 'firebase/auth';
 
+import { getAnalytics } from 'firebase/analytics';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: 'AIzaSyC2DE6KdBy95FkqVpk26JFthAazE27eJ1c',
   authDomain: 'e-commers-97d51.firebaseapp.com',
@@ -34,13 +40,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-const provider = new GoogleAuthProvider(); //هنا تعيد رمز المصادقة الخاص بنا مع كوكل و هو يختلف في كل مرة
-
-provider.setCustomParameters({
-  prompt: 'select_account', //هنا تجبر المستخدم على اختيار حساب في كل مرة يتفاعل بها المستخدم مع الموقع
-});
-
+const analytics = getAnalytics(app);
 /** 
   استخدم هذا النطاقات من أجل تحديد الوصول للمستخدمين يمكنك قراءة المزيد في Docs 
   */
