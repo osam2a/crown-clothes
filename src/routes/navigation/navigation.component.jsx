@@ -23,9 +23,6 @@ const navigation = () => {
         {/* OPTIONS */}
         <div className='navigation-opations  flex justify-evenly items-center gap-6 text-lg font-bold '>
           <div>
-            <Link to='/test'>test</Link>
-          </div>
-          <div>
             <Link to='/'>HOME</Link>
           </div>
 
