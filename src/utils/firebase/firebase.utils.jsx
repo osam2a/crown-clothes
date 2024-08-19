@@ -47,7 +47,7 @@ const analytics = getAnalytics(app);
 // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 export const auth = getAuth(); // هنا سأقوم بتصدير مفتاح المصادقة ختى أستطيع استخدماه في مشرعي
-
+const provider = new GoogleAuthProvider();
 auth.languageCode = 'it';
 
 export const GooglesignInWithPopup = () => signInWithPopup(auth, provider);
