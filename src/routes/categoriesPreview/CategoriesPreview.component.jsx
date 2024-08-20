@@ -7,7 +7,7 @@ const CategoriesPreview = () => {
   const titles = Object.keys(categoryMap);
 
   return titles.map((title) => {
-    const products = categoryMap[title]; 
+    const products = categoryMap[title];
     return (
       <div key={title} id={title}>
         <div>

@@ -1,16 +1,18 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '../../componet/button/Button.component';
-const Card = (props) => {
-  const { id, title, img } = props;
+const Card = ({ props }) => {
+  const { id, name, imageUrl, title } = props;
+  console.log(`props`);
+  console.log(props);
+
   const navigate = useNavigate();
   const moveToCategory = () => navigate(`/shop/${title}`);
   return (
     <div
-      key={id}
-      id={id}
       onClick={moveToCategory}
-      className={`group bg-[url( ".${img}")] bg-gray-500 bg-center bg-[length:100%] bg-no-repeat transition-all hover:bg-[length:110%]
-      min-w-[30%] h-60 flex grow shrink basis-1 items-center justify-center border border-black overflow-hidden cursor-pointer `}
+      className={` bg-no-repeat bg-cover bg-center 
+      min-w-[30%] max-w-xl h-60 flex grow shrink basis-1 items-center  justify-center border border-black overflow-hidden cursor-pointer `}
+      style={{ backgroundImage: `url(${imageUrl})` }}
     >
       <Button buttonType='inverted'>
         <h1 className='text-xl font-bold'>{title.toUpperCase()}</h1>

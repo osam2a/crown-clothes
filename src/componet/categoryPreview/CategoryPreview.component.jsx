@@ -11,7 +11,7 @@ const CategoryPreview = ({ title, products }) => {
       </h2>
       <div className='preview grid grid-cols-4 max-sm:grid-cols-1 gap-x-2 gap-y-1 '>
         {products
-          .filter((_, idx) => idx < 4)
+          .filter((_, index) => index < 4)
           .map((product) => (
             <ProductCard props={product} key={product.id} />
           ))}

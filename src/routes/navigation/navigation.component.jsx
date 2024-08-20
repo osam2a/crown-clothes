@@ -7,6 +7,8 @@ import { CartsContext } from '../../context/Cart.context';
 
 import CartIcon from '../../componet/cart-icon/CardIcon.component';
 import CartDropdown from '../../componet/cart-dropdown/CartDropdown';
+
+import logo from '../../assets/logo.png';
 const navigation = () => {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen } = useContext(CartsContext);
@@ -17,7 +19,9 @@ const navigation = () => {
         {/* LOGO */}
         <div>
           <Link to='/'>
-            <div className='w-fit'>logo</div>
+            <div className='w-10 h-10 '>
+              <img src={logo} alt='' />
+            </div>
           </Link>
         </div>
         {/* OPTIONS */}

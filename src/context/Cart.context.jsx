@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer, useState } from 'react';
+import { createContext, useEffect, useReducer } from 'react';
 
 export const addCartItem = (cartItems, productToAdd) => {
   const flag = cartItems.find((e) => e.id === productToAdd.id);
@@ -61,7 +61,7 @@ const CART_ACTION = {
 
 const cartReducer = (state, action) => {
   const { type, payload } = action;
-  console.log(payload);
+
   switch (type) {
     case CART_ACTION.UPDATE_ITEMS:
       return {
